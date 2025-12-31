@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, My Everything</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4a0e0e; /* Deep romantic red */
+            --accent: #d4af37;  /* Gold */
+            --bg: #fffcf9;      /* Soft cream */
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Floating Hearts Animation Background */
+        #heartContainer {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        /* Hero Section with YOUR PHOTO */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            /* REPLACED WITH YOUR IMAGE */
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://googleusercontent.com/image_generation_content/0') no-repeat center/cover;
+            color: white;
+            padding: 20px;
+            position: relative;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            margin: 0;
+            color: var(--accent);
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .roles {
+            font-style: italic;
+            font-size: clamp(1rem, 4vw, 1.5rem);
+            margin-top: 15px;
+            letter-spacing: 1px;
+        }
+
+        /* Section Styling */
+        section {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: white;
+            padding: 40px 20px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            border-bottom: 4px solid var(--accent);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+        }
+
+        /* The Letter */
+        .letter-box {
+            background: #fff;
+            padding: 60px 40px;
+            border-radius: 2px;
+            box-shadow: 0 0 50px rgba(0,0,0,0.05);
+            line-height: 2;
+            font-size: 1.1rem;
+            text-align: left;
+            position: relative;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .letter-box::before {
+            content: "♥";
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 40px;
+            color: var(--accent);
+        }
+
+        .btn {
+            background: var(--accent);
+            color: #000;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 30px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #fff;
+            transform: scale(1.05);
+        }
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            background: #1a1a1a;
+            color: #777;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="heartContainer"></div>
+
+    <header>
+        <h1>Happy Birthday, My Love</h1>
+        <p class="roles">Best Friend • Partner • Guide • My Everything</p>
+        <a href="#message" class="btn">Click for a Surprise</a>
+    </header>
+
+    <section>
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem;">To the Man who means the World to me</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>The Best Friend</h3>
+                <p>You're the first person I want to talk to when I wake up and the last person I want to see before I sleep.</p>
+            </div>
+            <div class="card">
+                <h3>The Partner</h3>
+                <p>Thank you for building this beautiful life with me. Every day with you is a new adventure.</p>
+            </div>
+            <div class="card">
+                <h3>The Guide</h3>
+                <p>Your wisdom, patience, and strength lead me. You make me want to be the best version of myself.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="message">
+        <div class="letter-box">
+            <h2 style="font-family: 'Playfair Display', serif; color: var(--primary);">My Dearest,</h2>
+            <p>Today is a celebration of <strong>you</strong>. Out of all the people in the world, I am the luckiest to walk by your side. You are my safe place, my biggest cheerleader, and my soulmate.</p>
+            <p>I hope your day is as wonderful, kind, and handsome as you are. May this year bring you all the success and happiness you deserve. I'll be right here cheering you on, every step of the way.</p>
+            <p><strong>Happy Birthday, my love!</strong><br><br>
+            With all my heart,<br>
+            [Your Name]</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Created with love for a very special person.</p>
+    </footer>
+
+    <script>
+        const container = document.getElementById('heartContainer');
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.innerHTML = '❤️';
+            heart.style.position = 'absolute';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.top = '100vh';
+            heart.style.opacity = Math.random();
+            heart.style.fontSize = Math.random() * 20 + 15 + 'px';
+            heart.style.transition = 'transform 6s linear, opacity 6s linear';
+            heart.style.zIndex = "100";
+            
+            container.appendChild(heart);
+
+            setTimeout(() => {
+                heart.style.transform = `translateY(-110vh) rotate(${Math.random() * 360}deg)`;
+                heart.style.opacity = '0';
+            }, 100);
+
+            setTimeout(() => { heart.remove(); }, 6000);
+        }
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html>
